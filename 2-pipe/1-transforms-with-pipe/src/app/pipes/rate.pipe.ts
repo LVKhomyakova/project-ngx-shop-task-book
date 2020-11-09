@@ -6,6 +6,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 // @ts-ignore
 export class RatePipe implements PipeTransform {
   public transform(value: number): number | undefined {
-    return 0;
+    const fractionalPart = value - Math.trunc(value);
+    if (fractionalPart < 0.25) {
+      return Math.floor(value);
+    }
+
+    if (fractionalPart >= 0.75) {
+      return Math.ceil(value);
+    }
+
+    return Math.floor(value) + 0.5;
   }
 }

@@ -3,20 +3,20 @@
     <img
       loading="auto"
       class="card-img-top"
-      [src]="product.images | imgUrl"
-      [alt]="product.name"
+      [src]="product?.images | imgUrl"
+      [alt]="product?.name"
     />
   </div>
   <div class="card-body">
     <h5 class="card-title pointer">
-      {{ product.name }}
+      {{ product?.name }}
     </h5>
     <div>
-      <div>Рейтинг: {{product.rating | rate}}</div>
+      <div>Рейтинг: {{product?.rating | rate}}</div>
       <p class="rate">
-      <p class="rate-amount ml-2">{{ product.feedbacksCount | review}}</p>
+      <p class="rate-amount ml-2">{{ product?.feedbacksCount | review}}</p>
       <p class="card-text price-text product-price">
-        <strong>{{ product.price }}€</strong>
+        <strong>{{ product?.price }}€</strong>
       </p>
     </div>
   </div>

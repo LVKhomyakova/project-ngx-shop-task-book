@@ -65,4 +65,4 @@ export const oneProduct: IProduct = {
   rating: 3.6666666666666665,
   status: false,
   count: 2,
-}
+};
