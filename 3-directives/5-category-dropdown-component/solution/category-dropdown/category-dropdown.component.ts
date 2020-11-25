@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ICategory } from '../../../../../shared/mocks/categories.mock';
+import { ICategory } from '../../../../shared/mocks/3-directives/categories';
 
 @Component({
   selector: 'ngx-shop-category-dropdown',

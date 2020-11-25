@@ -7,7 +7,7 @@ import { ImgUrlPipe } from '../pipes/img-url.pipe';
 import { ReviewPipe } from '../pipes/review.pipe';
 import { RatePipe } from '../pipes/rate.pipe';
 
-describe('[Moдуль 2]  Компонент продукта', () => {
+describe('[Moдуль 2 - Компонент продукта]', () => {
   let fixture: ComponentFixture<ProductCardComponent>;
   let component: ProductCardComponent;
   beforeEach(() => {
@@ -32,15 +32,16 @@ describe('[Moдуль 2]  Компонент продукта', () => {
     expect((component as any).product).toBeDefined();
   });
 
-  it('при нажатии на блок с селектором .go-to-product должен вызываться метод  redirectTo и срабатывать собстевнное событие goToProduct',
-    () => {
-      spyOn(component as any, 'redirectTo').and.callThrough();
-      spyOn((component as any)?.goToProduct, 'emit').and.callThrough();
-      const incrementButton = fixture.debugElement.query(By.css('div.go-to-product'));
-      incrementButton.triggerEventHandler('click', null);
-      expect((component as any)?.redirectTo).toHaveBeenCalledTimes(1);
-      expect((component as any)?.goToProduct.emit).toHaveBeenCalledTimes(1);
-    });
+  it('при нажатии на блок с селектором .go-to-product должен вызываться метод  redirectTo и срабатывать собстевнное событие goToProduct', () => {
+    spyOn(component as any, 'redirectTo').and.callThrough();
+    spyOn((component as any)?.goToProduct, 'emit').and.callThrough();
+    const incrementButton = fixture.debugElement.query(
+      By.css('div.go-to-product')
+    );
+    incrementButton.triggerEventHandler('click', null);
+    expect((component as any)?.redirectTo).toHaveBeenCalledTimes(1);
+    expect((component as any)?.goToProduct.emit).toHaveBeenCalledTimes(1);
+  });
 
   it('тег c селекторор [.card-img-wrap img] должен иметь правильное связывание свойств src и alt', () => {
     (component as any).product = oneProduct;
@@ -48,7 +49,7 @@ describe('[Moдуль 2]  Компонент продукта', () => {
     const imgEl = fixture.debugElement.query(By.css('.card-img-wrap img'));
     expect(imgEl).toBeTruthy();
     const {
-      images: [{url}],
+      images: [{ url }],
       name,
     } = (component as any)?.product;
     expect(imgEl.attributes.src).toEqual(url);
@@ -78,11 +79,12 @@ describe('[Moдуль 2]  Компонент продукта', () => {
   it('тег с селектором .product-price strong  должен правильно интерполировать свойство price продукта', () => {
     (component as any).product = oneProduct;
     fixture.detectChanges();
-    const prodNameEL = fixture.debugElement.query(By.css('.product-price strong'));
+    const prodNameEL = fixture.debugElement.query(
+      By.css('.product-price strong')
+    );
     expect(prodNameEL).toBeTruthy();
     expect(prodNameEL.nativeElement.textContent.trim()).toEqual(
       `${(component as any)?.product.price}€`
     );
   });
-
 });

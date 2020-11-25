@@ -8,7 +8,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement, EventEmitter } from '@angular/core';
 import { SideMenuComponent } from './side-menu.component';
 
-describe('[Moдуль 4 Компонент cписок кактегорий и подкатегорий]', () => {
+describe('[Moдуль 4 - Компонент cписок кактегорий и подкатегорий]', () => {
   let fixture: ComponentFixture<SideMenuComponent>;
   let component: SideMenuComponent;
   beforeEach(() => {

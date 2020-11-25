@@ -1,4 +1,4 @@
-import { ICategory } from './../../../../../../shared/interfaces/categories.interface';
+import { ICategory } from './../../../../../../shared/mocks/4-services/categories';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({

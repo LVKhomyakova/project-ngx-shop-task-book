@@ -8,7 +8,7 @@ import {
   ISubCategory,
 } from '../../../../../shared/mocks/3-directives/categories';
 
-describe('[Moдуль 3 Компонент cписок кактегорий и подкатегорий]', () => {
+describe('[Moдуль 3 - Компонент cписок кактегорий и подкатегорий]', () => {
   let fixture: ComponentFixture<SideMenuComponent>;
   let component: SideMenuComponent;
   beforeEach(() => {

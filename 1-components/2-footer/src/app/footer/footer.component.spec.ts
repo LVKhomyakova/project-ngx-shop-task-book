@@ -2,7 +2,7 @@ import { FooterComponent } from './footer.component';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-describe('[Moдуль 1 Футтер компонент]', () => {
+describe('[Moдуль 1 - Футтер компонент]', () => {
   let fixture: ComponentFixture<FooterComponent>;
   let component: FooterComponent;
   beforeEach(() => {
@@ -20,11 +20,9 @@ describe('[Moдуль 1 Футтер компонент]', () => {
     expect((component as any)?.currentYear).toEqual(new Date().getFullYear());
   });
   it('тег с селектором .footer-title должне инерполировать свойства author и currentYear', () => {
-    const {currentYear, author} = component as any;
+    const { currentYear, author } = component as any;
     const titleEl = fixture.debugElement.query(By.css('.footer-title'));
     const titleValue = titleEl.nativeElement.textContent.trim();
-    expect(titleValue).toEqual(
-      `© ${currentYear}, ${author}`
-    );
+    expect(titleValue).toEqual(`© ${currentYear}, ${author}`);
   });
 });

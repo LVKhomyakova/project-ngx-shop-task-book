@@ -76,6 +76,7 @@ export const oneProduct: IProduct = {
       rate: 3,
     },
   ],
+  count: 4,
   feedbacksCount: 2,
   images: [
     {

@@ -888,29 +888,29 @@
         }
       }
     },
-    "6-routing_1-routes-and-navigation-component": {
+    "6-routing_1-ngx-shop": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "sass"
         }
       },
-      "root": "6-routing-WIP/1-routes-and-navigation",
-      "sourceRoot": "6-routing-WIP/1-routes-and-navigation/src",
+      "root": "6-routing/1-ngx-shop",
+      "sourceRoot": "6-routing/1-ngx-shop/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/6-routing_1-routes-and-navigation-component",
+            "outputPath": "dist/6-routing_1-ngx-shop",
             "index": "shared/index.html",
-            "main": "6-routing-WIP/1-routes-and-navigation/src/main.ts",
+            "main": "6-routing/1-ngx-shop/src/main.ts",
             "polyfills": "shared/polyfills.ts",
-            "tsConfig": "6-routing-WIP/1-routes-and-navigation/src/tsconfig.app.json",
+            "tsConfig": "6-routing/1-ngx-shop/src/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "6-routing-WIP/1-routes-and-navigation/src/favicon.ico",
-              "6-routing-WIP/1-routes-and-navigation/src/assets"
+              "6-routing/1-ngx-shop/src/favicon.ico",
+              "6-routing/1-ngx-shop/src/assets"
             ],
             "styles": ["shared/styles.sass"]
           }
@@ -918,19 +918,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "6-routing_1-routes-and-navigation-component:build"
+            "browserTarget": "6-routing_1-ngx-shop:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "6-routing-WIP/1-routes-and-navigation/src/test.ts",
+            "main": "6-routing/1-ngx-shop/src/test.ts",
             "polyfills": "shared/polyfills.ts",
-            "tsConfig": "6-routing-WIP/1-routes-and-navigation/src/tsconfig.spec.json",
+            "tsConfig": "6-routing/1-ngx-shop/src/tsconfig.spec.json",
             "karmaConfig": "shared/karma.conf.js",
             "assets": [
-              "6-routing-WIP/1-routes-and-navigation/src/favicon.ico",
-              "6-routing-WIP/1-routes-and-navigation/src/assets"
+              "6-routing/1-ngx-shop/src/favicon.ico",
+              "6-routing/1-ngx-shop/src/assets"
             ],
             "styles": ["shared/styles.sass"]
           }
@@ -939,8 +939,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "6-routing-WIP/1-routes-and-navigation/src/tsconfig.app.json",
-              "6-routing-WIP/1-routes-and-navigation/src/tsconfig.spec.json"
+              "6-routing/1-ngx-shop/src/tsconfig.app.json",
+              "6-routing/1-ngx-shop/src/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }

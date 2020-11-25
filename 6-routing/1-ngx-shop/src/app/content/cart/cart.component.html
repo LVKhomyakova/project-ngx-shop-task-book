@@ -1,0 +1,43 @@
+<main role="main">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h3 *ngIf="!disabled" class="h5 mb-4 mt-4 text-md-center cart-title">
+          Ваш заказ
+        </h3>
+        <div
+          *ngIf="disabled"
+          class="alert alert-primary fade show"
+          role="alert"
+        >
+          Ваш заказ был оформлен
+        </div>
+        <ng-container *ngIf="!disabled">
+          <ngx-shop-cart-product
+            [disabled]="disabled"
+            *ngFor="let product of cart$ | async; trackBy: trackById"
+            [product]="product"
+            (increment)="incrementProductInCart($event)"
+            (decrement)="decrementProductInCart($event)"
+          ></ngx-shop-cart-product>
+        </ng-container>
+        <ngx-shop-order-form
+          *ngIf="!disabled"
+          (confirm)="confirm($event)"
+        ></ngx-shop-order-form>
+        <div
+          *ngIf="disabled"
+          class="text-center mt-2 mb-5 my-sm-5 col-lg-4 offset-lg-4"
+        >
+          <button
+            (click)="comeBack()"
+            type="button"
+            class="px-2 btn-block btn btn-primary btn-lg"
+          >
+            Обратно в магазин
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

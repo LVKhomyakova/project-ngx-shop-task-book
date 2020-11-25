@@ -8,7 +8,7 @@ import {
 } from '../../../../../shared/mocks/3-directives/categories';
 import { CategoryDropdownComponent } from './category-dropdown.component';
 
-describe('[Moдуль 3 Компонент выбора категории товара]', () => {
+describe('[Moдуль 3 - Компонент выбора категории товара]', () => {
   let fixture: ComponentFixture<CategoryDropdownComponent>;
   let component: CategoryDropdownComponent;
   beforeEach(() => {

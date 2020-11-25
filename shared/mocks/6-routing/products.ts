@@ -9,8 +9,21 @@ export interface IProduct {
   rating?: number | null;
   feedbacks?: IFeedback;
   subCategory?: string;
+  count?: number;
+
+  characteristics?: ICharacteristics[];
+}
+interface ICharacteristics {
+  title: string;
+  items: ICharacteristic[];
+  isExtended?: boolean;
 }
 
+interface ICharacteristic {
+  name: string;
+  value: string;
+  isExtended?: boolean;
+}
 export interface IFeedback {
   rate: number;
   advantages: string;

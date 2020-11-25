@@ -1,6 +1,6 @@
 import { RatePipe } from './rate.pipe';
 
-describe('[Moдуль 2 Rate pipe]', () => {
+describe('[Moдуль 2 - Rate pipe]', () => {
   let ratePipe: RatePipe;
   beforeEach(() => {
     ratePipe = new RatePipe();

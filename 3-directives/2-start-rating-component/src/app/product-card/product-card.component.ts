@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { IProduct } from '../../../../../shared/mocks/interfaces';
+import { IProduct } from '../../../../../shared/mocks/3-directives/interfaces';
 
 @Component({
   selector: 'ngx-shop-product-card',

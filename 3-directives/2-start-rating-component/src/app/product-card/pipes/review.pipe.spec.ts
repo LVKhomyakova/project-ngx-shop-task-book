@@ -1,6 +1,6 @@
 import { ReviewPipe } from './review.pipe';
 
-describe('[Moдуль 2 review pipe]', () => {
+describe('[Moдуль 2 - review pipe]', () => {
   let reviewPipe: ReviewPipe;
   beforeEach(() => {
     reviewPipe = new ReviewPipe();
