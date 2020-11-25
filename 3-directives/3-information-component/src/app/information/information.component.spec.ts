@@ -99,7 +99,7 @@ describe('[Moдуль 3 - Компонент информации о товар�
     const prodNameEL = fixture.debugElement.query(By.css('.rate-amount'));
     expect(prodNameEL).toBeTruthy();
     expect(prodNameEL.nativeElement.textContent.trim()).toEqual(
-      `${(component as any)?.product.feedbacksCount} отзывa`
+      `${(component as any)?.product.feedbacksCount} отзыва`
     );
   });
 
