@@ -8,4 +8,7 @@ import { oneProduct } from '../../../../shared/mocks/3-directives/product';
 export class AppComponent {
   public title = 'Компонент рейтинга товара';
   public product = oneProduct;
+
+  goToProduct() {
+  }
 }
