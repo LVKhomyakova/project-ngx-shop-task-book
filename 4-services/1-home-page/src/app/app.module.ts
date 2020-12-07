@@ -7,11 +7,11 @@ import { HeaderComponent } from './home-page/header/header.component';
 import { FooterComponent } from './home-page/footer/footer.component';
 import { SideMenuComponent } from './home-page/side-menu/side-menu.component';
 import { ProductCardComponent } from './home-page/product-card/product-card.component';
-import { ProductsService } from './services/products/products.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BASE_URL_TOKEN } from './services/interceptor/config';
 import { environment } from './../environments/environment';
 import { CategoriesService } from './services/categories/category.service';
+import { ProductsService } from './services/products/products.service';
 
 @NgModule({
   declarations: [
