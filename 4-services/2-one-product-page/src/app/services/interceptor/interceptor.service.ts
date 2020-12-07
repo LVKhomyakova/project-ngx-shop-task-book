@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
-import { HttpHandler } from '@angular/common/http';
+import { HttpHandler, HttpParams } from '@angular/common/http';
 import {
   HttpEvent,
   HttpHeaders,
@@ -20,18 +20,18 @@ export interface IRes<T> {
 export class InterceptorService implements HttpInterceptor {
   constructor(@Inject(BASE_URL_TOKEN) private baseUrl: string) {}
 
-  public intercept<T extends IRes<T>>(
-    req: HttpRequest<T>,
-    next: HttpHandler
-  ): Observable<HttpResponse<T>> {
+  public intercept<T extends IRes<T>>(req: HttpRequest<T>, next: HttpHandler): Observable<HttpResponse<T>> {
+
     const headers: HttpHeaders = req.headers.append(
       'Content-Type',
       'application/json'
     );
+
     const jsonReq: HttpRequest<T> = req.clone({
       headers,
       url: `${this.baseUrl}${req.url}`,
     });
+
     return next.handle(jsonReq).pipe(
       filter((event: HttpEvent<IRes<T>>): event is HttpResponse<IRes<T>> => {
         if (event instanceof HttpResponse) {

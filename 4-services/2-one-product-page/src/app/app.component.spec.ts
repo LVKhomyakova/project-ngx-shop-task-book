@@ -54,6 +54,6 @@ describe('[Moдуль 4 - Компонент страницы товара app]'
   });
 
   it('компонент должен иметь свойство products c значением null', () => {
-    expect((component as any).products).toBeDefined(null);
+    expect((component as any).product$).toBeDefined(null);
   });
 });
