@@ -1,22 +1,24 @@
 <h3 class="h5 mb-4 mt-5 text-md-center">Ваши данные</h3>
-<div class="jumbotron jumbotron-light jumbotron-form mb-0">
+<div class="jumbotron jumbotron-light jumbotron-form mb-0"
+[formGroup]="form"
+(ngSubmit)="submit()">
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
         <label for="name">Имя:</label>
-        <input type="text" placeholder="Ваше имя" />
+        <input type="text" placeholder="Ваше имя" formControlName="name" />
         <p class="form-control-error-text"></p>
       </div>
       <div class="form-group mb-4">
         <label for="email">Электронный адрес:</label>
-        <input type="email" placeholder="email@gmail.com" />
+        <input type="email" placeholder="email@gmail.com" formControlName="email"/>
         <p class="form-control-error-text"></p>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
         <label for="phone">Телефон:</label>
-        <input type="text" placeholder="+44 7911 123456" />
+        <input type="text" placeholder="+44 7911 123456" formControlName="telephone"/>
         <p class="form-control-error-text"></p>
       </div>
       <div class="form-group mb-4">
@@ -25,11 +27,14 @@
           type="text"
           class="form-control"
           placeholder="Westminster, London SW1A 0AA, UK"
+          formControlName="address"
         />
       </div>
     </div>
   </div>
 </div>
 <div class="text-center mt-2 mb-5 my-sm-5">
-  <button type="submit" class="btn submit btn-primary btn-lg">Заказать!</button>
+  <button type="submit" class="btn submit btn-primary btn-lg"
+  (click)="submit()"
+  >Заказать!</button>
 </div>
