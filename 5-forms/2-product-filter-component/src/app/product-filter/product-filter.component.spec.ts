@@ -48,12 +48,12 @@ describe('[Moдуль 5 - Компонент фильтрации товаров
     expect(component.form.valid).toBeTruthy();
   });
 
-  it('поле name в форме должно быть валидным', () => {
+  it('поле brands в форме должно быть валидным', () => {
     const brands = component.form.controls.brands;
     expect(brands.valid).toBeTruthy();
   });
 
-  it('поле telephone в форме должно быть валидным', () => {
+  it('поле searchByName в форме должно быть валидным', () => {
     const searchByName = component.form.controls.searchByName;
     expect(searchByName.valid).toBeTruthy();
   });

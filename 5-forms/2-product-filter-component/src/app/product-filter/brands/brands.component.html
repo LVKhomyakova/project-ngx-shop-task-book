@@ -1,18 +1,29 @@
 <div class="form-group">
-  <ng-container>
+  <ng-container *ngIf="brands?.length > 0">
     <h6 class="mb-2 pb-1 pointer">
       <label class="text-dark mb-0">Бренд</label>
     </h6>
-    <div>
-      <div class="custom-control custom-checkbox mb-2 pointer">
-        <input type="checkbox" class="custom-control-input" />
+    <div *ngFor="let brand of brands; index as i">
+      <div class="custom-control custom-checkbox mb-2 pointer"
+      *ngIf="i < showAmount"
+      >
+        <input
+        type="checkbox"
+        class="custom-control-input"
+        [id]="brand"
+        [checked]="isChecked(brand)"
+        (click)="check(brand)"
+        />
         <label
-          class="custom-control-label text-dark pointer brand-name"
-        ></label>
+        class="custom-control-label text-dark pointer brand-name"
+        [for]="brand"
+        >{{brand}}</label>
       </div>
     </div>
 
-    <div class="all-characters pointer">
+    <div class="all-characters pointer" *ngIf="showAmount < brands.length"
+    (click)="showBrand(brands.length)"
+    >
       <a class="more">еще</a>
     </div>
   </ng-container>
