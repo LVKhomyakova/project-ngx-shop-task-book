@@ -15,17 +15,17 @@
 Для запуска окружения непрерывной разработки выполните команду
 
 ```bash
-npm run start:6-routing_1-routes-and-navigation-component
+npm run start:6-routing_1-ngx-shop
 ```
 
 Для проверки своего решения выполните
 
 ```bash
-npm run test:6-routing_1-routes-and-navigation-component
+npm run test:6-routing_1-ngx-shop
 ```
 
 Для проверки стилистики кода
 
 ```bash
-npm run lint:6-routing_1-routes-and-navigation-component
+npm run lint:6-routing_1-ngx-shop
 ```
